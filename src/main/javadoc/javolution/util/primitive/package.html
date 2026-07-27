@@ -1,0 +1,28 @@
+<body>
+<p>Provides high-performance, resizable list implementations for Java primitive types, 
+   avoiding object creation and auto-boxing overhead.</p>
+
+<h2>Overview:</h2>
+<p>All primitive list classes in this package extend the abstract base class 
+   {@link javolution.util.primitive.FastPrimitiveList FastPrimitiveList} and implement 
+   {@link javolution.lang.Reusable Reusable} for zero-GC object recycling:</p>
+<ul>
+  <li>{@link javolution.util.primitive.FastBooleanArrayList FastBooleanArrayList} for <code>boolean</code></li>
+  <li>{@link javolution.util.primitive.FastByteArrayList FastByteArrayList} for <code>byte</code></li>
+  <li>{@link javolution.util.primitive.FastCharArrayList FastCharArrayList} for <code>char</code></li>
+  <li>{@link javolution.util.primitive.FastShortArrayList FastShortArrayList} for <code>short</code></li>
+  <li>{@link javolution.util.primitive.FastIntArrayList FastIntArrayList} for <code>int</code></li>
+  <li>{@link javolution.util.primitive.FastLongArrayList FastLongArrayList} for <code>long</code></li>
+  <li>{@link javolution.util.primitive.FastFloatArrayList FastFloatArrayList} for <code>float</code></li>
+  <li>{@link javolution.util.primitive.FastDoubleArrayList FastDoubleArrayList} for <code>double</code></li>
+</ul>
+
+<h2>Primitive Iterators and Views:</h2>
+<p>Iteration without boxing is supported via {@link javolution.util.primitive.FastPrimitiveIterator FastPrimitiveIterator} 
+   and specialized primitive iterator interfaces (such as {@link javolution.util.primitive.FastIntIterator FastIntIterator}).
+   In addition, each primitive list supports thread-safe views (via <code>shared()</code>) and read-only views 
+   (via <code>unmodifiable()</code>).</p>
+
+<p>All primitive array lists in this package are optimized for speed, predictability, and minimal memory footprint, 
+   making them suitable for real-time applications and memory-constrained environments.</p>
+</body>
